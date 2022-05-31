@@ -4,3 +4,5 @@ version = "6.0.0"
 edition = "2021"
 
 [dependencies]
+actix-web = "4"
+scylla = "0.4.5"
