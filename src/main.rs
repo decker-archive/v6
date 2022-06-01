@@ -2,6 +2,7 @@ use actix_web::{get, web, App, HttpServer, Responder, Result};
 use nanoid::nanoid;
 mod utils;
 mod responses;
+mod database;
 
 
 #[get("/auth/fingerprint")]
@@ -17,6 +18,7 @@ async fn fingerprint() -> Result<impl Responder> {
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
+    database::connect_db().await;
     HttpServer::new(|| {
         App::new()
             .service(fingerprint)

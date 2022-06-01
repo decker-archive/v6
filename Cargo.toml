@@ -5,7 +5,8 @@ edition = "2021"
 
 [dependencies]
 actix-web = "4"
-scylla = "0.4.5"
+cdrs-tokio = "6.2.0"
 serde = { version = "1.0", features = ["derive"] }
 rustflake = "0.1.1"
 nanoid = "0.4.0"
+once_cell = "1.12.0"
